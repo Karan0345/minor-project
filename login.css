@@ -1,44 +1,66 @@
+:root {
+    --primary-color: #4A90E2;
+    --hover-color: #357ABD;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --card-text: #6B7280;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: #E5E7EB;
+    --secondary-bg: #F3F4F6;
+}
+
 .login-container {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    background: var(--background-color);
-    margin-top: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+    animation: rotate 30s linear infinite;
 }
 
 .login-box {
     background: var(--card-bg);
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px var(--shadow-color);
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px var(--shadow-color);
     width: 100%;
     max-width: 450px;
-    transition: transform 0.3s ease;
+    position: relative;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.login-box:hover {
-    transform: translateY(-5px);
-}
+/* .login-box:hover {
+    transform: translateY(-5px) scale(1.01);
+} */
 
 .login-header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .login-header h2 {
-    color: var(--text-color);
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-.login-header p {
-    color: var(--card-text);
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
+    color: #1F2937;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(to right, #4A90E2, #764ba2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .input-group {
@@ -46,18 +68,28 @@
     display: flex;
     align-items: center;
     background: var(--secondary-bg);
-    border-radius: 10px;
-    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
     transition: all 0.3s ease;
+    border: 2px solid transparent;
+    margin-bottom: 1.25rem;
 }
 
 .input-group:focus-within {
-    box-shadow: 0 0 0 2px var(--primary-color);
+    border-color: var(--primary-color);
+    background: white;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.1);
 }
 
 .input-group i {
     color: var(--card-text);
-    margin-right: 0.8rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.input-group:focus-within i {
+    color: var(--primary-color);
 }
 
 .input-group input {
@@ -65,130 +97,125 @@
     background: none;
     border: none;
     outline: none;
-    color: var(--text-color);
+    color: #1F2937;
     font-size: 1rem;
+    padding: 0.25rem 0;
 }
 
-.input-group input::placeholder {
-    color: var(--card-text);
-}
-
-.toggle-password {
+.login-button {
+    width: 100%;
+    padding: 1.1rem;
+    background: linear-gradient(to right, #4A90E2, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    margin-left: auto;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(74, 144, 226, 0.2);
+}
+
+.login-button:active {
+    transform: translateY(0);
 }
 
 .form-options {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
 }
 
 .remember-me {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
     color: var(--card-text);
     cursor: pointer;
+    user-select: none;
 }
 
-.forgot-password {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-}
-
-.forgot-password:hover {
-    color: var(--hover-color);
-}
-
-.login-button {
-    width: 100%;
-    padding: 1rem;
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 600;
+.remember-me input[type="checkbox"] {
+    appearance: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid var(--card-text);
+    border-radius: 4px;
+    position: relative;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
-.login-button:hover {
+.remember-me input[type="checkbox"]:checked {
     background: var(--primary-color);
-    transform: translateY(-2px);
+    border-color: var(--primary-color);
+}
+
+.remember-me input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 0.8rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .social-login {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
+    position: relative;
     text-align: center;
 }
 
 .social-login p {
+    display: inline-block;
+    padding: 0 1rem;
+    background: var(--card-bg);
     color: var(--card-text);
-    margin-bottom: 1rem;
     position: relative;
+    z-index: 1;
 }
 
-.social-login p::before,
-.social-login p::after {
+.social-login::before {
     content: '';
     position: absolute;
     top: 50%;
-    width: 45%;
+    left: 0;
+    right: 0;
     height: 1px;
     background: var(--border-color);
-}
-
-.social-login p::before {
-    left: 0;
-}
-
-.social-login p::after {
-    right: 0;
+    z-index: 0;
 }
 
 .social-buttons {
+    margin-top: 1.5rem;
     display: flex;
+    justify-content: center;
     gap: 1rem;
-    justify-content: center;
 }
 
-.social-btn {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.8rem;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    background: none;
-    color: var(--text-color);
-    cursor: pointer;
-    transition: all 0.3s ease;
+.social-buttons a {
+    text-decoration: none;
+    color: #4A5568;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.social-btn:hover {
-    background: var(--secondary-bg);
-    transform: translateY(-2px);
-}
-
-.social-btn.google i {
-    color: #DB4437;
-}
-
-.social-btn.facebook i {
-    color: #4267B2;
+.social-buttons a:hover {
+    color: var(--primary-color);
 }
 
 .register-link {
     margin-top: 2rem;
     text-align: center;
     color: var(--card-text);
+    font-size: 0.95rem;
 }
 
 .register-link a {
@@ -196,19 +223,31 @@
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
+    margin-left: 0.5rem;
 }
 
 .register-link a:hover {
     color: var(--hover-color);
+    text-decoration: underline;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (max-width: 480px) {
     .login-box {
         padding: 2rem;
+        margin: 1rem;
     }
 
-    .social-buttons {
-        flex-direction: column;
+    .login-header h2 {
+        font-size: 1.8rem;
     }
 
     .form-options {
@@ -216,36 +255,30 @@
         gap: 1rem;
         align-items: flex-start;
     }
+
+    .social-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-/* Add these styles to your existing login.css */
 .alert {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
     text-align: center;
-    animation: slideIn 0.3s ease;
+    animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 500;
 }
 
 .alert-error {
-    background: #ffe5e5;
+    background: rgba(255, 71, 87, 0.1);
     color: #ff4757;
-    border: 1px solid #ff4757;
+    border: 1px solid rgba(255, 71, 87, 0.2);
 }
 
 .alert-success {
-    background: #e5ffe5;
+    background: rgba(40, 167, 69, 0.1);
     color: #28a745;
-    border: 1px solid #28a745;
+    border: 1px solid rgba(40, 167, 69, 0.2);
 }
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-} 

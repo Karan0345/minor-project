@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mentor - INFI CAREER</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ai-mentor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo">INFI CAREER</div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        <div class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="student-dashboard.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li><a href="ai-mentor.html" class="nav-link active">
+                    <i class="fas fa-robot"></i>
+                    <span>AI Mentor</span>
+                </a></li>
+                <li class="theme-toggle-wrapper">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <div class="toggle-track">
+                            <div class="toggle-sun">
+                                <i class="fas fa-sun"></i>
+                                <span>Light</span>
+                            </div>
+                            <div class="toggle-moon">
+                                <i class="fas fa-moon"></i>
+                                <span>Dark</span>
+                            </div>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="ai-mentor-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Your AI Career Coach</h1>
+                <p>Get personalized career guidance powered by advanced AI technology</p>
+                <div class="ai-features">
+                    <div class="feature">
+                        <i class="fas fa-brain"></i>
+                        <span>Skill Analysis</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Growth Insights</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Goal Setting</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="mentor-content">
+            <!-- Chat Interface -->
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="ai-status">
+                        <span class="status-dot"></span>
+                        <span>AI Mentor Online</span>
+                    </div>
+                    <button class="clear-chat">
+                        <i class="fas fa-trash"></i>
+                        Clear Chat
+                    </button>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Welcome Message -->
+                    <div class="message ai-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>Hello! I'm your AI Career Coach. I can help you with:</p>
+                            <ul class="quick-options">
+                                <li>Career path analysis</li>
+                                <li>Skill development recommendations</li>
+                                <li>Industry insights and trends</li>
+                                <li>Interview preparation tips</li>
+                            </ul>
+                            <p>What would you like to explore today?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input">
+                    <div class="suggestion-chips">
+                        <button class="chip" data-query="What career paths suit my interests?">Career paths</button>
+                        <button class="chip" data-query="What skills should I develop?">Skills analysis</button>
+                        <button class="chip" data-query="Tell me about industry trends">Industry trends</button>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="userInput" placeholder="Type your question here...">
+                        <button id="sendMessage">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Career Insights Panel -->
+            <div class="insights-panel">
+                <h2>Your Career Insights</h2>
+                <div class="insight-cards">
+                    <div class="insight-card skills">
+                        <h3>Top Skills to Develop</h3>
+                        <ul>
+                            <li>
+                                <span class="skill">Communication</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill">Leadership</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 60%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill">Problem Solving</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 85%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="insight-card trends">
+                        <h3>Industry Trends</h3>
+                        <div class="trend-items">
+                            <div class="trend-item">
+                                <i class="fas fa-arrow-trend-up"></i>
+                                <span>AI & Machine Learning</span>
+                            </div>
+                            <div class="trend-item">
+                                <i class="fas fa-arrow-trend-up"></i>
+                                <span>Remote Work</span>
+                            </div>
+                            <div class="trend-item">
+                                <i class="fas fa-arrow-trend-up"></i>
+                                <span>Digital Transformation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="insight-card recommendations">
+                        <h3>Recommended Actions</h3>
+                        <div class="action-items">
+                            <div class="action-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Complete Python Programming Course</span>
+                            </div>
+                            <div class="action-item">
+                                <i class="fas fa-handshake"></i>
+                                <span>Join Professional Network</span>
+                            </div>
+                            <div class="action-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>Get Cloud Computing Certification</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="ai-mentor.js"></script>
+</body>
+</html>

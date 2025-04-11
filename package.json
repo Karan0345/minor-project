@@ -1,0 +1,13 @@
+{
+  "name": "mentor-connect",
+  "version": "1.0.0",
+  "description": "Mentor Connect System with Video and Chat",
+  "main": "chat-server.js",
+  "scripts": {
+    "start": "node chat-server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "ws": "^8.2.3"
+  }
+}

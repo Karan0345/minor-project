@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Assessment Test - INFI CAREER</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="assessments.css">
+    <link rel="stylesheet" href="personality-test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>Personality Assessment Test</h1>
+            <div class="timer">
+                <i class="fas fa-clock"></i>
+                <span id="time-remaining">30:00</span>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-text">
+                Question <span id="current-question">1</span> of <span id="total-questions">50</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="progress-indicator"></div>
+            </div>
+        </div>
+
+        <div id="question-container">
+            <!-- Questions will be dynamically loaded here -->
+        </div>
+
+        <div class="personality-scale">
+            <div class="scale-label">Strongly Disagree</div>
+            <div class="scale-options">
+                <label class="scale-option">
+                    <input type="radio" name="current-answer" value="1">
+                    <span>1</span>
+                </label>
+                <label class="scale-option">
+                    <input type="radio" name="current-answer" value="2">
+                    <span>2</span>
+                </label>
+                <label class="scale-option">
+                    <input type="radio" name="current-answer" value="3">
+                    <span>3</span>
+                </label>
+                <label class="scale-option">
+                    <input type="radio" name="current-answer" value="4">
+                    <span>4</span>
+                </label>
+                <label class="scale-option">
+                    <input type="radio" name="current-answer" value="5">
+                    <span>5</span>
+                </label>
+            </div>
+            <div class="scale-label">Strongly Agree</div>
+        </div>
+
+        <div class="test-navigation">
+            <button id="prev-btn" class="nav-btn" onclick="previousQuestion()" disabled>
+                <i class="fas fa-arrow-left"></i> Previous
+            </button>
+            <div class="question-dots" id="question-dots">
+                <!-- Question dots will be added here -->
+            </div>
+            <button id="next-btn" class="nav-btn" onclick="nextQuestion()">
+                Next <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <div class="test-actions">
+            <button id="submit-test" class="submit-btn" onclick="confirmSubmit()" style="display: none;">
+                Submit Test
+            </button>
+        </div>
+    </div>
+
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <h2>Submit Test?</h2>
+            <p>Are you sure you want to submit your test? This action cannot be undone.</p>
+            <div class="modal-actions">
+                <button onclick="hideModal()">Cancel</button>
+                <button onclick="submitTest()" class="submit-btn">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="results-modal" class="modal">
+        <div class="modal-content results-content">
+            <h2>Your Personality Profile</h2>
+            <div class="personality-traits">
+                <div class="trait-category">
+                    <h3>Mind</h3>
+                    <div class="trait-scale">
+                        <span>Introvert</span>
+                        <div class="trait-bar">
+                            <div class="trait-indicator" id="mind-indicator"></div>
+                        </div>
+                        <span>Extrovert</span>
+                    </div>
+                </div>
+                <div class="trait-category">
+                    <h3>Energy</h3>
+                    <div class="trait-scale">
+                        <span>Practical</span>
+                        <div class="trait-bar">
+                            <div class="trait-indicator" id="energy-indicator"></div>
+                        </div>
+                        <span>Intuitive</span>
+                    </div>
+                </div>
+                <div class="trait-category">
+                    <h3>Nature</h3>
+                    <div class="trait-scale">
+                        <span>Logical</span>
+                        <div class="trait-bar">
+                            <div class="trait-indicator" id="nature-indicator"></div>
+                        </div>
+                        <span>Emotional</span>
+                    </div>
+                </div>
+                <div class="trait-category">
+                    <h3>Tactics</h3>
+                    <div class="trait-scale">
+                        <span>Flexible</span>
+                        <div class="trait-bar">
+                            <div class="trait-indicator" id="tactics-indicator"></div>
+                        </div>
+                        <span>Structured</span>
+                    </div>
+                </div>
+            </div>
+            <div class="career-recommendations">
+                <h3>Recommended Career Paths</h3>
+                <ul id="career-paths">
+                    <!-- Career paths will be dynamically added here -->
+                </ul>
+            </div>
+            <button onclick="closeResults()" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="personality-test.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQ Assessment Test - INFI CAREER</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="assessments.css">
+    <link rel="stylesheet" href="iq-test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>IQ Assessment Test</h1>
+            <div class="timer">
+                <i class="fas fa-clock"></i>
+                <span id="time-remaining">45:00</span>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-text">
+                Question <span id="current-question">1</span> of <span id="total-questions">40</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="progress-indicator"></div>
+            </div>
+        </div>
+
+        <div id="question-container">
+            <!-- Questions will be dynamically loaded here -->
+        </div>
+
+        <div class="test-navigation">
+            <button id="prev-btn" class="nav-btn" onclick="previousQuestion()" disabled>
+                <i class="fas fa-arrow-left"></i> Previous
+            </button>
+            <div class="question-dots" id="question-dots">
+                <!-- Question dots will be added here -->
+            </div>
+            <button id="next-btn" class="nav-btn" onclick="nextQuestion()">
+                Next <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <div class="test-actions">
+            <button id="submit-test" class="submit-btn" onclick="confirmSubmit()" style="display: none;">
+                Submit Test
+            </button>
+        </div>
+    </div>
+
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <h2>Submit Test?</h2>
+            <p>Are you sure you want to submit your test? This action cannot be undone.</p>
+            <div class="modal-actions">
+                <button onclick="hideModal()">Cancel</button>
+                <button onclick="submitTest()" class="submit-btn">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="iq-test.js"></script>
+</body>
+</html>

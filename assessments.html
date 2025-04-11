@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Assessments - INFI CAREER</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="assessments.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar (same as dashboard) -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo">INFI CAREER</div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        <div class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="student-dashboard.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li class="theme-toggle-wrapper">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <div class="toggle-track">
+                            <div class="toggle-sun">
+                                <i class="fas fa-sun"></i>
+                                <span>Light</span>
+                            </div>
+                            <div class="toggle-moon">
+                                <i class="fas fa-moon"></i>
+                                <span>Dark</span>
+                            </div>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="assessments-container">
+        <h1 class="page-title">Online Assessments</h1>
+        
+        <div class="assessment-grid">
+            <!-- IQ Assessment Section -->
+            <div class="assessment-card">
+                <div class="assessment-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h2>IQ Assessment Test</h2>
+                <p>Evaluate your cognitive abilities, problem-solving skills, and logical reasoning</p>
+                <ul class="assessment-details">
+                    <li><i class="fas fa-clock"></i> Duration: 45 minutes</li>
+                    <li><i class="fas fa-question-circle"></i> Questions: 40</li>
+                    <li><i class="fas fa-chart-bar"></i> Difficulty: Moderate</li>
+                </ul>
+                <div class="assessment-actions">
+                    <a href="iq-test.html" class="action-link">
+                        <button class="start-btn">
+                            Start IQ Test
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Personality Assessment Section -->
+            <div class="assessment-card">
+                <div class="assessment-icon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h2>Personality Assessment Test</h2>
+                <p>Discover your personality traits, work style, and career compatibility</p>
+                <ul class="assessment-details">
+                    <li><i class="fas fa-clock"></i> Duration: 30 minutes</li>
+                    <li><i class="fas fa-question-circle"></i> Questions: 50</li>
+                    <li><i class="fas fa-chart-bar"></i> Difficulty: Easy</li>
+                </ul>
+                <div class="assessment-actions">
+                    <a href="personality-test.html" class="action-link">
+                        <button class="start-btn">
+                            Start Personality Test
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="assessments.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Connect - INFI CAREER</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="mentor-connect.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo">INFI CAREER</div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        <div class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="student-dashboard.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li class="theme-toggle-wrapper">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <div class="toggle-track">
+                            <div class="toggle-sun">
+                                <i class="fas fa-sun"></i>
+                                <span>Light</span>
+                            </div>
+                            <div class="toggle-moon">
+                                <i class="fas fa-moon"></i>
+                                <span>Dark</span>
+                            </div>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="mentor-container">
+        <h1 class="page-title">Connect with Mentors</h1>
+        
+        <div class="mentorship-options">
+            <!-- Video Mentorship Section -->
+            <div class="mentorship-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h2>Video Mentorship</h2>
+                </div>
+                <div class="card-content">
+                    <p>Schedule one-on-one video sessions with experienced mentors</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Face-to-face interaction</li>
+                        <li><i class="fas fa-check"></i> Screen sharing for better guidance</li>
+                        <li><i class="fas fa-check"></i> Flexible scheduling</li>
+                        <li><i class="fas fa-check"></i> Recording available post-session</li>
+                    </ul>
+                    <div class="mentor-list">
+                        <h3>Available Mentors</h3>
+                        <div class="mentor-grid" id="video-mentors">
+                            <!-- Mentor cards will be loaded dynamically -->
+                        </div>
+                    </div>
+                    <button class="schedule-btn" onclick="startVideoCall()">
+                        Start Video Call
+                        <i class="fas fa-video"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Mentorship Section -->
+            <div class="mentorship-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h2>Chat Mentorship</h2>
+                </div>
+                <div class="card-content">
+                    <p>Get instant guidance through our chat platform</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> 24/7 availability</li>
+                        <li><i class="fas fa-check"></i> File sharing support</li>
+                        <li><i class="fas fa-check"></i> Chat history preservation</li>
+                        <li><i class="fas fa-check"></i> Quick response time</li>
+                    </ul>
+                    <div class="mentor-list">
+                        <h3>Online Mentors</h3>
+                        <div class="mentor-grid" id="chat-mentors">
+                            <!-- Online mentor cards will be loaded dynamically -->
+                        </div>
+                    </div>
+                    <button class="chat-btn" onclick="startChatSession()">
+                        Start Chat Session
+                        <i class="fas fa-comment"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Call Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content video-modal-content">
+            <div class="modal-header">
+                <div class="video-header-info">
+                    <h3>Video Session with <span id="video-mentor-name"></span></h3>
+                    <span class="call-status">Connected</span>
+                </div>
+                <div class="video-controls">
+                    <button class="control-btn" onclick="toggleMute()">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <button class="control-btn" onclick="toggleVideo()">
+                        <i class="fas fa-video"></i>
+                    </button>
+                    <button class="control-btn" onclick="toggleScreen()">
+                        <i class="fas fa-desktop"></i>
+                    </button>
+                    <button class="control-btn end-call" onclick="endCall()">
+                        <i class="fas fa-phone-slash"></i>
+                    </button>
+                </div>
+                <button class="close-btn" onclick="hideModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="video-container">
+                <div class="main-video-container">
+                    <video id="remote-video" autoplay playsinline></video>
+                </div>
+                <div class="local-video-container">
+                    <video id="local-video" autoplay playsinline muted></video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Modal -->
+    <div id="chat-modal" class="modal">
+        <div class="modal-content chat-modal-content">
+            <div class="modal-header">
+                <div class="chat-header-info">
+                    <img src="" alt="Mentor" id="chat-mentor-avatar">
+                    <div>
+                        <h3 id="chat-mentor-name"></h3>
+                        <span class="online-status">Online</span>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="hideModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages will be loaded dynamically -->
+            </div>
+            <div class="chat-input-area">
+                <div class="input-wrapper">
+                    <input type="text" id="chat-input" placeholder="Type your message...">
+                    <button class="attachment-btn">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                </div>
+                <button class="send-btn" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="mentor-connect.js"></script>
+</body>
+</html>

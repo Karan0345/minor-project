@@ -1,0 +1,389 @@
+/* Personality Test Styles */
+:root {
+    --primary-gradient: linear-gradient(135deg, #6c63ff, #4a90e2);
+    --secondary-gradient: linear-gradient(135deg, #4a90e2, #6c63ff);
+}
+
+.test-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--bg-primary);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.test-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.test-header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.timer {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-secondary);
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+/* Progress Bar */
+.progress-container {
+    margin-bottom: 2rem;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.progress-bar {
+    height: 6px;
+    background: var(--bg-secondary);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--primary-gradient);
+    transition: width 0.3s ease;
+}
+
+/* Question Container */
+.question {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.question h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+/* Personality Scale */
+.personality-scale {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-radius: 0.8rem;
+}
+
+.scale-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    flex: 1;
+    text-align: center;
+}
+
+.scale-options {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex: 2;
+}
+
+.scale-option {
+    position: relative;
+    cursor: pointer;
+}
+
+.scale-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.scale-option span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.scale-option input:checked + span {
+    background: var(--primary-gradient);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Navigation */
+.test-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.nav-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:not(:disabled):hover {
+    background: var(--primary-gradient);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.question-dots {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--primary-gradient);
+    transform: scale(1.2);
+}
+
+.dot.answered {
+    background: var(--text-secondary);
+}
+
+/* Submit Button */
+.submit-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--primary-gradient);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--bg-primary);
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+.modal h2 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.modal p {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.modal-actions button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-actions button:first-child {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+/* Results Modal */
+.results-content {
+    max-width: 700px;
+}
+
+.personality-traits {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.trait-category h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.trait-scale {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.trait-scale span {
+    flex: 0 0 80px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.trait-bar {
+    flex: 1;
+    height: 8px;
+    background: var(--bg-secondary);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.trait-indicator {
+    height: 100%;
+    background: var(--primary-gradient);
+    transition: width 1s ease-in-out;
+}
+
+.career-recommendations {
+    text-align: left;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--bg-secondary);
+}
+
+.career-recommendations h3 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.career-recommendations ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.career-recommendations li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    background: var(--bg-secondary);
+    border-radius: 0.5rem;
+    color: var(--text-primary);
+}
+
+.career-recommendations i {
+    color: #fbbf24;
+}
+
+.close-btn {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--primary-gradient);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .test-container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .personality-scale {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .scale-options {
+        order: -1;
+    }
+
+    .modal-content {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .career-recommendations ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dark Theme Support */
+[data-theme="dark"] .scale-option span {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .trait-bar {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .career-recommendations li {
+    background: rgba(255, 255, 255, 0.1);
+}

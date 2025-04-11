@@ -20,6 +20,18 @@
         
         <div class="nav-menu">
             <ul class="nav-links">
+                <li><a href="mentor-dashboard.html" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li><a href="mentor-schedule.html" class="nav-link">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Schedule</span>
+                </a></li>
+                <li><a href="mentor-profile.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a></li>
                 <li class="theme-toggle-wrapper">
                     <button id="theme-toggle" class="theme-toggle">
                         <div class="toggle-track">
@@ -34,76 +46,149 @@
                         </div>
                     </button>
                 </li>
-                <li class="user-profile">
-                    <img src="default-avatar.png" alt="Profile" id="userAvatar">
-                    <span id="mentorName">Dr. John Smith</span>
-                </li>
-                <li><button class="logout-btn" id="logoutBtn">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span>Logout</span>
-                </button></li>
             </ul>
         </div>
     </nav>
 
     <div class="dashboard-container">
-        <div class="dashboard-header">
-            <h1>Mentor Dashboard</h1>
-            <p>Welcome back, <span id="mentorGreeting">Dr. John Smith</span></p>
-        </div>
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <h1 class="welcome-title">Welcome back, <span class="mentor-name">Dr. Smith</span>!</h1>
+                <p class="welcome-subtitle">You have 3 upcoming sessions today</p>
+            </div>
+            <div class="mentor-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value">128</span>
+                        <span class="stat-label">Total Students</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value">45</span>
+                        <span class="stat-label">Sessions This Month</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value">4.9</span>
+                        <span class="stat-label">Average Rating</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Main Content Grid -->
         <div class="dashboard-grid">
-            <!-- Online Progress Report Section -->
-            <div class="dashboard-card progress-report">
+            <!-- Upcoming Sessions -->
+            <div class="dashboard-card">
                 <div class="card-header">
-                    <h2><i class="fas fa-chart-line"></i> Online Progress Report</h2>
+                    <h2><i class="fas fa-calendar-check"></i> Upcoming Sessions</h2>
                     <button class="view-all-btn">View All</button>
                 </div>
-                <div class="card-content">
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <span class="stat-value">25</span>
-                            <span class="stat-label">Active Students</span>
+                <div class="sessions-list">
+                    <div class="session-item">
+                        <div class="session-time">
+                            <span class="time">10:00 AM</span>
+                            <span class="date">Today</span>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-value">85%</span>
-                            <span class="stat-label">Success Rate</span>
+                        <div class="session-info">
+                            <h3>Career Guidance Session</h3>
+                            <p>with John Doe</p>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-value">120</span>
-                            <span class="stat-label">Sessions Completed</span>
-                        </div>
+                        <button class="join-btn">Join Now</button>
                     </div>
-                    <div class="progress-chart">
-                        <canvas id="progressChart"></canvas>
+                    <div class="session-item">
+                        <div class="session-time">
+                            <span class="time">2:30 PM</span>
+                            <span class="date">Today</span>
+                        </div>
+                        <div class="session-info">
+                            <h3>Technical Interview Prep</h3>
+                            <p>with Sarah Wilson</p>
+                        </div>
+                        <button class="join-btn upcoming">Join Later</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Student Report Section -->
-            <div class="dashboard-card student-report">
+            <!-- Student Messages -->
+            <div class="dashboard-card">
                 <div class="card-header">
-                    <h2><i class="fas fa-users"></i> Student Report</h2>
+                    <h2><i class="fas fa-envelope"></i> Recent Messages</h2>
                     <button class="view-all-btn">View All</button>
                 </div>
-                <div class="card-content">
-                    <div class="student-list">
-                        <!-- Student items will be added by JavaScript -->
+                <div class="messages-list">
+                    <div class="message-item unread">
+                        <img src="default-avatar.png" alt="Student" class="student-avatar">
+                        <div class="message-content">
+                            <div class="message-header">
+                                <h3>Alice Brown</h3>
+                                <span class="message-time">5m ago</span>
+                            </div>
+                            <p>Thank you for the great session yesterday! I have a follow-up question...</p>
+                        </div>
+                    </div>
+                    <div class="message-item">
+                        <img src="default-avatar.png" alt="Student" class="student-avatar">
+                        <div class="message-content">
+                            <div class="message-header">
+                                <h3>Mike Johnson</h3>
+                                <span class="message-time">2h ago</span>
+                            </div>
+                            <p>Can we reschedule tomorrow's session to 4 PM?</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Online Mentorship Section -->
-            <div class="dashboard-card online-mentorship">
+            <!-- Performance Analytics -->
+            <div class="dashboard-card">
                 <div class="card-header">
-                    <h2><i class="fas fa-video"></i> Online Mentorship</h2>
-                    <button class="schedule-btn">Schedule Session</button>
+                    <h2><i class="fas fa-chart-line"></i> Performance</h2>
+                    <div class="period-selector">
+                        <button class="period-btn active">Week</button>
+                        <button class="period-btn">Month</button>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <div class="upcoming-sessions">
-                        <h3>Upcoming Sessions</h3>
-                        <div class="session-list">
-                            <!-- Session items will be added by JavaScript -->
+                <div class="analytics-content">
+                    <div class="metric-grid">
+                        <div class="metric-item">
+                            <div class="metric-header">
+                                <span class="metric-label">Session Hours</span>
+                                <span class="metric-value">24h</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-header">
+                                <span class="metric-label">Student Satisfaction</span>
+                                <span class="metric-value">98%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 98%"></div>
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-header">
+                                <span class="metric-label">Response Rate</span>
+                                <span class="metric-value">95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -111,8 +196,7 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
     <script src="mentor-dashboard.js"></script>
 </body>
-</html> 
+</html>

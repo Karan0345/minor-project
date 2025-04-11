@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Explorer - INFI CAREER</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="career-explorer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo">INFI CAREER</div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        <div class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="student-dashboard.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li><a href="career-explorer.html" class="nav-link active">
+                    <i class="fas fa-compass"></i>
+                    <span>Career Explorer</span>
+                </a></li>
+                <li class="theme-toggle-wrapper">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <div class="toggle-track">
+                            <div class="toggle-sun">
+                                <i class="fas fa-sun"></i>
+                                <span>Light</span>
+                            </div>
+                            <div class="toggle-moon">
+                                <i class="fas fa-moon"></i>
+                                <span>Dark</span>
+                            </div>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="explorer-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1>Explore Your Future Career</h1>
+            <p>Discover detailed career paths and make informed decisions about your future</p>
+            <div class="search-box">
+                <input type="text" placeholder="Search careers..." id="careerSearch">
+                <i class="fas fa-search"></i>
+            </div>
+        </section>
+
+        <!-- Career Paths Grid -->
+        <div class="career-grid">
+            <!-- Engineering Path -->
+            <div class="career-card" data-category="engineering">
+                <div class="career-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h2>Engineering</h2>
+                <div class="career-content">
+                    <div class="specializations">
+                        <h3>Popular Specializations</h3>
+                        <ul>
+                            <li>Software Engineering</li>
+                            <li>Mechanical Engineering</li>
+                            <li>Electrical Engineering</li>
+                            <li>Civil Engineering</li>
+                        </ul>
+                    </div>
+                    <div class="requirements">
+                        <h3>Key Requirements</h3>
+                        <ul>
+                            <li>Strong mathematics and physics background</li>
+                            <li>Problem-solving skills</li>
+                            <li>Technical aptitude</li>
+                            <li>Bachelor's degree in Engineering</li>
+                        </ul>
+                    </div>
+                    <div class="career-footer">
+                        <div class="salary-range">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>$60,000 - $150,000+</span>
+                        </div>
+                        <button class="explore-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medical Path -->
+            <div class="career-card" data-category="medical">
+                <div class="career-icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <h2>Medical Professional</h2>
+                <div class="career-content">
+                    <div class="specializations">
+                        <h3>Popular Specializations</h3>
+                        <ul>
+                            <li>General Medicine</li>
+                            <li>Surgery</li>
+                            <li>Pediatrics</li>
+                            <li>Cardiology</li>
+                        </ul>
+                    </div>
+                    <div class="requirements">
+                        <h3>Key Requirements</h3>
+                        <ul>
+                            <li>Strong biology and chemistry background</li>
+                            <li>Medical degree (MD)</li>
+                            <li>Residency completion</li>
+                            <li>Medical license</li>
+                        </ul>
+                    </div>
+                    <div class="career-footer">
+                        <div class="salary-range">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>$150,000 - $400,000+</span>
+                        </div>
+                        <button class="explore-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Path -->
+            <div class="career-card" data-category="legal">
+                <div class="career-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h2>Legal Professional</h2>
+                <div class="career-content">
+                    <div class="specializations">
+                        <h3>Popular Specializations</h3>
+                        <ul>
+                            <li>Corporate Law</li>
+                            <li>Criminal Law</li>
+                            <li>Family Law</li>
+                            <li>Intellectual Property</li>
+                        </ul>
+                    </div>
+                    <div class="requirements">
+                        <h3>Key Requirements</h3>
+                        <ul>
+                            <li>Bachelor's degree</li>
+                            <li>Law degree (JD)</li>
+                            <li>Bar exam passage</li>
+                            <li>Strong analytical skills</li>
+                        </ul>
+                    </div>
+                    <div class="career-footer">
+                        <div class="salary-range">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>$70,000 - $200,000+</span>
+                        </div>
+                        <button class="explore-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design Path -->
+            <div class="career-card" data-category="design">
+                <div class="career-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h2>Graphic Designer</h2>
+                <div class="career-content">
+                    <div class="specializations">
+                        <h3>Popular Specializations</h3>
+                        <ul>
+                            <li>UI/UX Design</li>
+                            <li>Brand Identity</li>
+                            <li>Motion Graphics</li>
+                            <li>Web Design</li>
+                        </ul>
+                    </div>
+                    <div class="requirements">
+                        <h3>Key Requirements</h3>
+                        <ul>
+                            <li>Design degree or certification</li>
+                            <li>Creative portfolio</li>
+                            <li>Software proficiency</li>
+                            <li>Visual communication skills</li>
+                        </ul>
+                    </div>
+                    <div class="career-footer">
+                        <div class="salary-range">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>$45,000 - $100,000+</span>
+                        </div>
+                        <button class="explore-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="career-explorer.js"></script>
+</body>
+</html>

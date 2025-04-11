@@ -17,9 +17,16 @@
                 <span class="hamburger"></span>
             </button>
         </div>
-        
         <div class="nav-menu">
             <ul class="nav-links">
+                <li><a href="student-dashboard.html" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li><a href="profile.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a></li>
                 <li class="theme-toggle-wrapper">
                     <button id="theme-toggle" class="theme-toggle">
                         <div class="toggle-track">
@@ -34,76 +41,53 @@
                         </div>
                     </button>
                 </li>
-                <li class="user-profile">
-                    <img src="default-avatar.png" alt="Profile" id="userAvatar">
-                    <span id="userName">Loading...</span>
-                </li>
-                <li><button class="logout-btn" id="logoutBtn">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span>Logout</span>
-                </button></li>
             </ul>
         </div>
     </nav>
 
     <div class="dashboard-container">
-        <h1 class="dashboard-title">Welcome to Your Career Journey</h1>
-        
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <h1 class="welcome-title">Welcome back, Student!</h1>
+            <p class="welcome-subtitle">Track your progress, explore career paths, and connect with mentors to achieve your goals.</p>
+        </section>
+
+        <!-- Dashboard Grid -->
         <div class="dashboard-grid">
-            <!-- Online Assessment Section -->
+            <!-- Online Assessments Section -->
             <div class="dashboard-card">
                 <div class="card-icon">
-                    <i class="fas fa-tasks"></i>
+                    <i class="fas fa-clipboard-check"></i>
                 </div>
-                <h2>Online Assessment</h2>
-                <p>Take personality tests and skill assessments to understand your strengths</p>
+                <h2>Online Assessments</h2>
+                <p>Take personality and IQ tests to understand your strengths and potential</p>
                 <div class="card-actions">
-                    <button class="action-btn" data-action="assessment">
-                        <span>Start Assessment</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                    <div class="progress-info">
-                        <span>2/5 completed</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 40%"></div>
-                        </div>
+                    <a href="assessments.html" style="text-decoration: none; width: 100%;">
+                        <button class="action-btn" data-action="assessments">
+                            <span>Take Assessment</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </a>
+                    <div class="recommendations">
+                        <span>2 tests available</span>
                     </div>
                 </div>
             </div>
 
-            <!-- AI Mentorship Section -->
-            <div class="dashboard-card">
-                <div class="card-icon">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <h2>AI Mentorship</h2>
-                <p>Get personalized career guidance from our AI-powered mentor</p>
-                <div class="card-actions">
-                    <button class="action-btn" data-action="ai-chat">
-                        <span>Chat with AI</span>
-                        <i class="fas fa-comment"></i>
-                    </button>
-                    <div class="last-session">
-                        <i class="fas fa-clock"></i>
-                        <span>Last session: 2 days ago</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Career Options Section -->
+            <!-- Career Explorer Section -->
             <div class="dashboard-card">
                 <div class="card-icon">
                     <i class="fas fa-compass"></i>
                 </div>
-                <h2>Career Options</h2>
+                <h2>Career Explorer</h2>
                 <p>Explore various career paths based on your interests and skills</p>
                 <div class="card-actions">
                     <button class="action-btn" data-action="careers">
                         <span>Explore Careers</span>
                         <i class="fas fa-search"></i>
                     </button>
-                    <div class="recommendations">
-                        <span>5 new recommendations</span>
+                    <div class="career-matches">
+                        <span>5 new matches</span>
                     </div>
                 </div>
             </div>
@@ -116,19 +100,74 @@
                 <h2>Mentors Connect</h2>
                 <p>Connect with experienced professionals in your field of interest</p>
                 <div class="card-actions">
-                    <button class="action-btn" data-action="mentors">
-                        <span>Find Mentors</span>
-                        <i class="fas fa-handshake"></i>
-                    </button>
+                    <a href="mentor-connect.html" style="text-decoration: none; width: 100%;">
+                        <button class="action-btn" data-action="mentors">
+                            <span>Find Mentors</span>
+                            <i class="fas fa-handshake"></i>
+                        </button>
+                    </a>
                     <div class="available-mentors">
-                        <span>15 mentors available</span>
+                        <span>15 online now</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Mentorship Section -->
+            <div class="dashboard-card">
+                <div class="card-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h2>AI Mentorship</h2>
+                <p>Get instant guidance and answers from our AI mentor assistant</p>
+                <div class="card-actions">
+                    <a href="ai-mentor.html" style="text-decoration: none; width: 100%;">
+                        <button class="action-btn" data-action="ai-chat">
+                            <span>Chat with AI</span>
+                            <i class="fas fa-comment-dots"></i>
+                        </button>
+                    </a>
+                    <div class="ai-stats">
+                        <span><i class="fas fa-clock"></i> Available 24/7</span>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Progress Section -->
+        <section class="progress-section">
+            <div class="progress-grid">
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <div class="progress-title">Assessment Progress</div>
+                        <div class="progress-percentage">75%</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <div class="progress-title">Career Exploration</div>
+                        <div class="progress-percentage">60%</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                </div>
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <div class="progress-title">Mentor Sessions</div>
+                        <div class="progress-percentage">40%</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 40%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <script src="script.js"></script>
     <script src="dashboard.js"></script>
 </body>
-</html> 
+</html>
