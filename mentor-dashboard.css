@@ -1,0 +1,255 @@
+body {
+    padding-top: 80px;
+    background: var(--background-color);
+}
+
+.dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.dashboard-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-header p {
+    color: var(--card-text);
+    font-size: 1.1rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.dashboard-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+.progress-report {
+    grid-column: 1 / -1;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.card-header h2 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.card-header h2 i {
+    color: var(--primary-color);
+}
+
+.view-all-btn, .schedule-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.view-all-btn {
+    background: var(--secondary-bg);
+    color: var(--text-color);
+}
+
+.schedule-btn {
+    background: var(--primary-color);
+    color: white;
+}
+
+.view-all-btn:hover, .schedule-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--secondary-bg);
+    border-radius: 15px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--card-text);
+    font-size: 0.9rem;
+}
+
+/* Student List */
+.student-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.student-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--secondary-bg);
+    border-radius: 12px;
+}
+
+.student-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.student-info {
+    flex: 1;
+}
+
+.student-info h3 {
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+}
+
+.student-info p {
+    color: var(--card-text);
+    font-size: 0.9rem;
+}
+
+.student-progress {
+    width: 150px;
+    text-align: right;
+}
+
+.progress-bar {
+    height: 6px;
+    background: var(--border-color);
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+}
+
+.progress {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+/* Session List */
+.upcoming-sessions h3 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.session-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.session-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--secondary-bg);
+    border-radius: 12px;
+}
+
+.session-time {
+    text-align: center;
+    min-width: 80px;
+}
+
+.session-time .date {
+    display: block;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.session-time .time {
+    font-size: 0.9rem;
+    color: var(--card-text);
+}
+
+.session-info {
+    flex: 1;
+}
+
+.session-info h4 {
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+}
+
+.session-info p {
+    color: var(--card-text);
+    font-size: 0.9rem;
+}
+
+.join-btn {
+    padding: 0.5rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.join-btn:hover {
+    transform: translateY(-2px);
+    background: var(--button-hover);
+}
+
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 1rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .student-progress {
+        display: none;
+    }
+} 

@@ -1,0 +1,188 @@
+.register-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--background-color);
+    margin-top: 2rem;
+}
+
+.register-box {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease;
+}
+
+.register-box:hover {
+    transform: translateY(-5px);
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.register-header h2 {
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.register-header p {
+    color: var(--card-text);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--secondary-bg);
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-group:focus-within {
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.input-group i {
+    color: var(--card-text);
+    margin-right: 0.8rem;
+}
+
+.input-group input {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.input-group input::placeholder {
+    color: var(--card-text);
+}
+
+.toggle-password {
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.form-options {
+    margin: 1.5rem 0;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--card-text);
+    cursor: pointer;
+}
+
+.remember-me a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.register-button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.register-button:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.login-link {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: var(--card-text);
+}
+
+.login-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+}
+
+.alert-error {
+    background: #ffe5e5;
+    color: #ff4757;
+    border: 1px solid #ff4757;
+}
+
+.alert-success {
+    background: #e5ffe5;
+    color: #28a745;
+    border: 1px solid #28a745;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-box {
+        padding: 2rem;
+    }
+}
+
+/* Password strength indicator */
+.password-strength {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--card-text);
+}
+
+.strength-meter {
+    height: 4px;
+    background: #ddd;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.strength-meter div {
+    height: 100%;
+    width: 0;
+    transition: all 0.3s ease;
+}
+
+.weak { background: #ff4757; }
+.medium { background: #ffa502; }
+.strong { background: #2ed573; } 

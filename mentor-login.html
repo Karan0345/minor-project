@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Login - INFI CAREER</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mentor-login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo">INFI CAREER</div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        
+        <div class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="theme-toggle-wrapper">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <div class="toggle-track">
+                            <div class="toggle-sun">
+                                <i class="fas fa-sun"></i>
+                                <span>Light</span>
+                            </div>
+                            <div class="toggle-moon">
+                                <i class="fas fa-moon"></i>
+                                <span>Dark</span>
+                            </div>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="login-container">
+        <div class="login-wrapper">
+            <div class="login-type-selector">
+                <a href="login.html" class="type-btn">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Student Login</span>
+                </a>
+                <a href="mentor-login.html" class="type-btn active">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Mentor Login</span>
+                </a>
+            </div>
+            
+            <div class="login-box mentor-login">
+                <div class="login-content">
+                    <div class="login-header">
+                        <div class="header-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h2>Welcome Back, Mentor!</h2>
+                        <p>Continue your journey of guiding students</p>
+                    </div>
+                    
+                    <form class="login-form">
+                        <div class="form-group">
+                            <label for="email">Professional Email</label>
+                            <div class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="password" placeholder="Enter your password" required>
+                                <i class="fas fa-eye-slash toggle-password"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox">
+                                <span>Keep me signed in</span>
+                            </label>
+                            <a href="#" class="forgot-password">Reset Password</a>
+                        </div>
+                        
+                        <button type="submit" class="login-button">
+                            <span><a href="mentor-dashboard.html" style="text-decoration: none; color: white;">Login as Mentor</a></span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="mentor-info">
+                    <div class="mentor-benefits">
+                        <h3>Why Join as a Mentor?</h3>
+                        <ul>
+                            <li>
+                                <div class="benefit-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="benefit-text">
+                                    <h4>Impact Lives</h4>
+                                    <p>Guide students towards successful careers</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="benefit-icon">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div class="benefit-text">
+                                    <h4>Grow Network</h4>
+                                    <p>Connect with other professionals</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="benefit-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="benefit-text">
+                                    <h4>Get Recognized</h4>
+                                    <p>Earn badges and certifications</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="apply-section">
+                            <p>Ready to make a difference?</p>
+                            <a href="mentor-apply.html" class="apply-btn">Apply as Mentor</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="mentor-login.js"></script>
+</body>
+</html> 

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply as Mentor - INFI CAREER</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mentor-apply.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Add Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo">INFI CAREER</div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        
+        <div class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="theme-toggle-wrapper">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <div class="toggle-track">
+                            <div class="toggle-sun">
+                                <i class="fas fa-sun"></i>
+                                <span>Light</span>
+                            </div>
+                            <div class="toggle-moon">
+                                <i class="fas fa-moon"></i>
+                                <span>Dark</span>
+                            </div>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="apply-container">
+        <div class="apply-wrapper">
+            <div class="apply-header">
+                <div class="header-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h1>Become a Mentor</h1>
+                <p>Share your expertise and help shape future careers</p>
+            </div>
+
+            <div class="apply-content">
+                <div class="application-form">
+                    <form id="mentorApplicationForm">
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h2><i class="fas fa-user"></i> Personal Information</h2>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name</label>
+                                    <div class="input-group">
+                                        <i class="fas fa-user"></i>
+                                        <input type="text" id="fullName" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Professional Email</label>
+                                    <div class="input-group">
+                                        <i class="fas fa-envelope"></i>
+                                        <input type="email" id="email" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <div class="input-group">
+                                        <i class="fas fa-phone"></i>
+                                        <input type="tel" id="phone" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="linkedin">LinkedIn Profile</label>
+                                    <div class="input-group">
+                                        <i class="fab fa-linkedin"></i>
+                                        <input type="url" id="linkedin" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Professional Information -->
+                        <div class="form-section">
+                            <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="currentRole">Current Role</label>
+                                    <div class="input-group">
+                                        <i class="fas fa-briefcase"></i>
+                                        <input type="text" id="currentRole" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="company">Company</label>
+                                    <div class="input-group">
+                                        <i class="fas fa-building"></i>
+                                        <input type="text" id="company" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="experience">Years of Experience</label>
+                                    <div class="input-group">
+                                        <i class="fas fa-clock"></i>
+                                        <input type="number" id="experience" min="1" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Expertise -->
+                        <div class="form-section">
+                            <h2><i class="fas fa-star"></i> Areas of Expertise</h2>
+                            <div class="expertise-grid">
+                                <label class="expertise-item">
+                                    <input type="checkbox" name="expertise" value="career">
+                                    <span>Career Guidance</span>
+                                </label>
+                                <label class="expertise-item">
+                                    <input type="checkbox" name="expertise" value="tech">
+                                    <span>Technology</span>
+                                </label>
+                                <label class="expertise-item">
+                                    <input type="checkbox" name="expertise" value="business">
+                                    <span>Business</span>
+                                </label>
+                                <label class="expertise-item">
+                                    <input type="checkbox" name="expertise" value="leadership">
+                                    <span>Leadership</span>
+                                </label>
+                                <label class="expertise-item">
+                                    <input type="checkbox" name="expertise" value="education">
+                                    <span>Education</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Additional Information -->
+                        <div class="form-section">
+                            <h2><i class="fas fa-info-circle"></i> Additional Information</h2>
+                            <div class="form-group full-width">
+                                <label for="motivation">Why do you want to be a mentor?</label>
+                                <textarea id="motivation" rows="4" required></textarea>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="cv">Upload your CV</label>
+                                <div class="file-upload">
+                                    <input type="file" id="cv" accept=".pdf,.doc,.docx" required>
+                                    <label for="cv" class="file-label">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <span>Choose File</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn">
+                                <span><a href="mentor-dashboard.html">Submit Application</a></span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="mentor-apply.js"></script>
+</body>
+</html> 
