@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - INFI CAREER</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo">INFI CAREER</div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        
+        <div class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="mentor-dashboard.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li><a href="mentor-schedule.html" class="nav-link">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Schedule</span>
+                </a></li>
+                <li><a href="profile.html" class="nav-link active">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a></li>
+                <li class="theme-toggle-wrapper">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <div class="toggle-track">
+                            <div class="toggle-sun">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <div class="toggle-moon">
+                                <i class="fas fa-moon"></i>
+                            </div>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="profile-container">
+        <!-- Profile Header -->
+        <section class="profile-header">
+            <div class="profile-cover">
+                <button class="edit-cover">
+                    <i class="fas fa-camera"></i>
+                    <span>Change Cover</span>
+                </button>
+            </div>
+            <div class="profile-info">
+                <div class="profile-avatar">
+                    <img src="default-avatar.png" alt="Profile Picture">
+                    <button class="edit-avatar">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <div class="profile-details">
+                    <h1>Dr. Sarah Smith</h1>
+                    <p class="profile-title">Senior Software Engineer & Career Mentor</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <i class="fas fa-star"></i>
+                            <span>4.9 Rating</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-users"></i>
+                            <span>128 Students</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-certificate"></i>
+                            <span>Top Mentor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="profile-grid">
+            <!-- About Section -->
+            <section class="profile-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-user-circle"></i> About</h2>
+                    <button class="edit-btn"><i class="fas fa-pen"></i> Edit</button>
+                </div>
+                <div class="card-content">
+                    <p class="bio">Passionate software engineer with over 10 years of experience in full-stack development. Dedicated to helping aspiring developers achieve their career goals through personalized mentorship and practical guidance.</p>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <h3>Experience</h3>
+                                <p>10+ years</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h3>Education</h3>
+                                <p>Ph.D. in Computer Science</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Location</h3>
+                                <p>San Francisco, CA</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <h3>Languages</h3>
+                                <p>English, Spanish</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Expertise Section -->
+            <section class="profile-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-code"></i> Expertise</h2>
+                    <button class="edit-btn"><i class="fas fa-pen"></i> Edit</button>
+                </div>
+                <div class="card-content">
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <span class="skill-name">Full Stack Development</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">System Design</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Cloud Architecture</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">DevOps</span>
+                            <div class="skill-level intermediate"></div>
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reviews Section -->
+            <section class="profile-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-comments"></i> Reviews</h2>
+                    <div class="review-summary">4.9 <i class="fas fa-star"></i> (42 reviews)</div>
+                </div>
+                <div class="card-content">
+                    <div class="reviews-list">
+                        <div class="review-item">
+                            <img src="default-avatar.png" alt="Student" class="review-avatar">
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <h3>Alex Johnson</h3>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p>Dr. Smith is an exceptional mentor! Her guidance helped me land my dream job at a top tech company.</p>
+                                <span class="review-date">2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="review-item">
+                            <img src="default-avatar.png" alt="Student" class="review-avatar">
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <h3>Maria Garcia</h3>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p>Incredible mentor with deep technical knowledge and great teaching skills.</p>
+                                <span class="review-date">1 week ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="view-all-btn">View All Reviews</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

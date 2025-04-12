@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - INFI CAREER</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="student-profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo">INFI CAREER</div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        <div class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="student-dashboard.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a></li>
+                <li><a href="student-profile.html" class="nav-link active">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a></li>
+                <li class="theme-toggle-wrapper">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <div class="toggle-track">
+                            <div class="toggle-sun">
+                                <i class="fas fa-sun"></i>
+                                <span>Light</span>
+                            </div>
+                            <div class="toggle-moon">
+                                <i class="fas fa-moon"></i>
+                                <span>Dark</span>
+                            </div>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="profile-container">
+        <!-- Profile Header -->
+        <section class="profile-header">
+            <div class="profile-cover">
+                <button class="edit-cover">
+                    <i class="fas fa-camera"></i>
+                    <span>Change Cover</span>
+                </button>
+            </div>
+            <div class="profile-info">
+                <div class="profile-avatar">
+                    <img src="default-avatar.png" alt="Student Avatar">
+                    <button class="edit-avatar">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <div class="profile-details">
+                    <h1>Alex Johnson</h1>
+                    <p class="profile-title">Computer Science Student</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>3rd Year</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-book"></i>
+                            <span>12 Courses</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-clock"></i>
+                            <span>24 Sessions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="profile-grid">
+            <!-- About Section -->
+            <section class="profile-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-user-circle"></i> About</h2>
+                    <button class="edit-btn"><i class="fas fa-pen"></i> Edit</button>
+                </div>
+                <div class="card-content">
+                    <p class="bio">Passionate computer science student with a focus on artificial intelligence and web development. Looking to build a strong foundation in software engineering through mentorship and practical projects.</p>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-university"></i>
+                            <div>
+                                <h3>University</h3>
+                                <p>Stanford University</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <h3>Major</h3>
+                                <p>Computer Science</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-location-dot"></i>
+                            <div>
+                                <h3>Location</h3>
+                                <p>San Francisco, CA</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <h3>Languages</h3>
+                                <p>English, Spanish</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="profile-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-code"></i> Skills</h2>
+                    <button class="edit-btn"><i class="fas fa-pen"></i> Edit</button>
+                </div>
+                <div class="card-content">
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h3>Python</h3>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="skill-level expert">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h3>JavaScript</h3>
+                                <span>Intermediate</span>
+                            </div>
+                            <div class="skill-level intermediate">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h3>Machine Learning</h3>
+                                <span>Beginner</span>
+                            </div>
+                            <div class="skill-level beginner">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Data Structures</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Progress -->
+            <section class="profile-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-chart-line"></i> Learning Progress</h2>
+                    <div class="period-selector">
+                        <button class="period-btn active">Month</button>
+                        <button class="period-btn">All Time</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="progress-stats">
+                        <div class="progress-item">
+                            <div class="circular-progress">
+                                <svg viewBox="0 0 36 36">
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--bg-secondary)" stroke-width="2" />
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--primary-color)" stroke-width="2" stroke-dasharray="75, 100" />
+                                </svg>
+                                <span>75%</span>
+                            </div>
+                            <h3>Course Completion</h3>
+                        </div>
+                        <div class="progress-item">
+                            <div class="circular-progress">
+                                <svg viewBox="0 0 36 36">
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--bg-secondary)" stroke-width="2" />
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--success-color)" stroke-width="2" stroke-dasharray="90, 100" />
+                                </svg>
+                                <span>90%</span>
+                            </div>
+                            <h3>Attendance Rate</h3>
+                        </div>
+                        <div class="progress-item">
+                            <div class="circular-progress">
+                                <svg viewBox="0 0 36 36">
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--bg-secondary)" stroke-width="2" />
+                                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="var(--accent-color)" stroke-width="2" stroke-dasharray="85, 100" />
+                                </svg>
+                                <span>85%</span>
+                            </div>
+                            <h3>Assignment Score</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mentor Feedback -->
+            <section class="profile-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-comments"></i> Mentor Feedback</h2>
+                    <button class="view-all-btn">View All</button>
+                </div>
+                <div class="feedback-list">
+                    <div class="feedback-item">
+                        <div class="feedback-header">
+                            <img src="default-avatar.png" alt="Mentor" class="mentor-avatar">
+                            <div>
+                                <h3>Dr. Sarah Smith</h3>
+                                <span class="feedback-date">2 weeks ago</span>
+                            </div>
+                        </div>
+                        <p>Alex shows great potential in machine learning concepts. Consistently delivers high-quality work and asks insightful questions.</p>
+                        <div class="feedback-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="feedback-item">
+                        <div class="feedback-header">
+                            <img src="default-avatar.png" alt="Mentor" class="mentor-avatar">
+                            <div>
+                                <h3>Prof. Michael Chen</h3>
+                                <span class="feedback-date">1 month ago</span>
+                            </div>
+                        </div>
+                        <p>Excellent progress in web development. Successfully completed the React project with advanced features.</p>
+                        <div class="feedback-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
